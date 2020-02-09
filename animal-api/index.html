@@ -3,9 +3,9 @@
         <div id="imageSrc"></div>
         <div id="text"></div>
     </body>
-<script src="./index.js"></script>
+<script src="./lib/index.js"></script>
 <script>
-    AnimalApi.getDog().then(function(animal) {
+    AnimalApi.default.getDog().then(function(animal) {
         document.querySelector('#imageSrc').textContent = animal.imageSrc
         document.querySelector('#text').textContent = animal.text
     })

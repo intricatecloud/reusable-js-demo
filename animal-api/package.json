@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-modules-umd": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0"
