@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import AnimalApi from './animal-api';
 import './App.css';
 
 class App extends React.Component {
@@ -28,23 +29,19 @@ class App extends React.Component {
 
       switch(newIndex) {
         case CAT:
-          axios.get('https://aws.random.cat/meow').then((response) => {
-            const imageSrc = response.data.file
-            const text = 'CAT'
-            this.setState({currentAnimal: {imageSrc, text}})
+          AnimalApi.getCat().then((animal) => {
+            this.setState({currentAnimal: animal})
           })
           break;
         case DOG:
-          axios.get('https://random.dog/woof.json').then((response) => {
-            const imageSrc = response.data.url
-            const text = 'DOG'
-            this.setState({currentAnimal: {imageSrc, text}})
+          AnimalApi.getDog().then((animal) => {
+            this.setState({currentAnimal: animal})
           })
           break;
         case GOAT:
-          const imageSrc = 'http://placegoat.com/200'
-          const text = 'GOAT'
-          this.setState({currentAnimal: {imageSrc, text}})
+          AnimalApi.getGoat().then((animal) => {
+            this.setState({currentAnimal: animal})
+          })
           break;
       }
     }, 3000);
