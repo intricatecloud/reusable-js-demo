@@ -1,6 +1,5 @@
 import React from 'react';
-import axios from 'axios';
-import AnimalApi from './animal-api';
+import AnimalApi from 'animal-api';
 import './App.css';
 
 class App extends React.Component {
