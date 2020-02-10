@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimalApi from 'animal-api';
+import AnimalApi from 'animal-api/dist/index';
 import './App.css';
 
 class App extends React.Component {
